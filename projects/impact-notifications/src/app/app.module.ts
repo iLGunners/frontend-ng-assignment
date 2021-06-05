@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiModule } from '@impactech/common/src/lib/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { ApiModule } from '@impactech/common/src/lib/api';
   imports: [
     BrowserModule,
     ApiModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
