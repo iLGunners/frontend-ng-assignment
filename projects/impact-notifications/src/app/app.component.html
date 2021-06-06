@@ -3,9 +3,13 @@
   <span> Impact Notification </span>
 </mat-toolbar>
 
-<app-login></app-login>
-<app-register></app-register>
+<p>{{userAccessService.userLoggedIn}}</p>
+<p>{{userAccessService.userWantToRegister}}</p>
 
-<app-dashboard *ngIf="userAccessService.isUserLoggedIn"></app-dashboard>
+<app-login *ngIf="!userAccessService.userLoggedIn"></app-login>
+
+<app-register *ngIf="userAccessService.userWantToRegister"></app-register>
+
+<app-dashboard *ngIf="userAccessService.userLoggedIn"></app-dashboard>
 
 <router-outlet></router-outlet>

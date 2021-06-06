@@ -8,7 +8,5 @@ import { UseraccessService } from './useraccess.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Impact Notifications';
-
-  userAccessService = new UseraccessService;
+  public userAccessService = new UseraccessService;
 }

@@ -4,9 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UseraccessService {
-  isUserLoggedIn: boolean;
+  public userLoggedIn: boolean;
+  public userWantToRegister: boolean;
   
   constructor() {
-    this.isUserLoggedIn = false;
+    this.userLoggedIn = false;
+    this.userWantToRegister = false;
+  }
+
+  showRegisterComponentOrNot() {
+    this.userWantToRegister = true;
+  }
+
+  loginUser() {
+    console.log("login clicked");
+    this.userLoggedIn = true;
+  }
+
+  showRegisterComponent() {
+    console.log("register clicked");
+    this.userWantToRegister = true;
   }
 }

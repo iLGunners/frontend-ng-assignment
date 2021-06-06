@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="login-container">
+  <h2 class="login-text">Login</h2>
+
+  <button mat-flat-button color="primary" 
+    (click)="userAccessService.loginUser()">
+    Login
+  </button>
+
+  <button style="margin-left: 20px;" mat-flat-button 
+    (click)="userAccessService.showRegisterComponent()">
+    Register
+  </button>
+</div>
