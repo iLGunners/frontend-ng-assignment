@@ -3,4 +3,9 @@
   <span> Impact Notification </span>
 </mat-toolbar>
 
+<app-login></app-login>
+<app-register></app-register>
+
+<app-dashboard *ngIf="userAccessService.isUserLoggedIn"></app-dashboard>
+
 <router-outlet></router-outlet>
